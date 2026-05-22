@@ -1,0 +1,42 @@
+{
+  "name": "copilot-otel-cli",
+  "version": "0.1.0",
+  "description": "CLI to configure VS Code Copilot Chat OpenTelemetry export",
+  "type": "module",
+  "main": "./dist/bin/copilot-otel.js",
+  "bin": {
+    "copilot-otel": "./dist/bin/copilot-otel.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "prompts": "^2.4.2",
+    "kleur": "^4.1.5",
+    "ora": "^8.1.1",
+    "jsonc-parser": "^3.3.1",
+    "open": "^10.1.0",
+    "undici": "^6.21.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.8",
+    "memfs": "^4.15.0",
+    "msw": "^2.6.0"
+  }
+}
