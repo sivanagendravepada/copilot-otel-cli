@@ -14,8 +14,17 @@ Requires Node.js >= 20. macOS only (LaunchAgent-based).
 
 ## Quickstart
 
+No install required — run directly with npx:
+
 ```bash
-copilot-otel init --backend https://copilot-otel.example.com
+npx copilot-otel-cli init --backend https://copilot-otel.example.com --token <your-token>
+```
+
+Or install globally first:
+
+```bash
+npm i -g copilot-otel-cli
+copilot-otel init --backend https://copilot-otel.example.com --token <your-token>
 ```
 
 You will be prompted for an ingest token if `--token` is omitted. The CLI:
