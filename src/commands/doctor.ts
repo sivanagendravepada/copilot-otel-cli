@@ -146,7 +146,7 @@ export async function runDoctor(): Promise<void> {
     const token = tokenMatch ? tokenMatch[1] : null;
     if (!token) {
       results.push({
-        name: 'backend /api/cli/validate-token',
+        name: 'backend /cli/validate-token',
         ok: false,
         detail: 'could not parse token from env var',
       });
@@ -154,7 +154,7 @@ export async function runDoctor(): Promise<void> {
       try {
         const v = await validateToken({ backend: cfg.backendUrl, token });
         results.push({
-          name: 'backend /api/cli/validate-token',
+          name: 'backend /cli/validate-token',
           ok: true,
           detail: `user: ${v.username}`,
         });
@@ -162,7 +162,7 @@ export async function runDoctor(): Promise<void> {
         const msg =
           err instanceof BackendError ? `${err.code}: ${err.message}` : (err as Error).message;
         results.push({
-          name: 'backend /api/cli/validate-token',
+          name: 'backend /cli/validate-token',
           ok: false,
           detail: msg,
           hint: 'Token may be revoked. Generate a new one in the dashboard.',

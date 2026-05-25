@@ -6,7 +6,7 @@ import { BackendError, validateToken } from '../lib/backend-client.js';
 const BACKEND = 'http://backend.test';
 
 const server = setupServer(
-  http.post(`${BACKEND}/api/cli/validate-token`, async ({ request }) => {
+  http.post(`${BACKEND}/cli/validate-token`, async ({ request }) => {
     const auth = request.headers.get('authorization');
     if (auth === 'Bearer good') {
       return HttpResponse.json({ ok: true, username: 'alice', userId: 'u_1' });

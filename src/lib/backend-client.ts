@@ -45,7 +45,7 @@ export async function validateToken(
 
   let res;
   try {
-    res = await fetch(joinUrl(backend, '/api/cli/validate-token'), {
+    res = await fetch(joinUrl(backend, '/cli/validate-token'), {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
